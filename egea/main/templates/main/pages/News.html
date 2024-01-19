@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+{{ title }}
+<link rel="stylesheet" href=" {% static 'main/css/news.css' %}">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>News - EGEA Bochum</title>
+    <link rel="stylesheet" href="../../../static/main/css/news.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="Main.html"><img src="../../../static/main/images/images/Logo1.png" alt="logo" /></a>
+            </div>
+            <div class="burger"
+                onclick="document.querySelector('.nav').classList.toggle('active'); document.querySelector('.burger').classList.toggle('active'); ">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="Main.html">Home</a></li>
+                    <li><a href="../News.html">News</a> </li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="About.html">About us</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li class="hidden_login"><a href="#">Log in</a></li>
+                </ul>
+            </nav>
+            <div class="login">
+                <button class="button">
+                    Log in
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="fon">
+        <div class="box">NEWS</div>
+    </section>
+
+    <section class="feed">
+        <div class="feed_container">
+            <div class="search">
+                <img src="../../../static/main/images/images/loop.png">
+                <input class="searching_text"></input>
+            </div>
+            <div class="title">Actual</div>
+        </div>
+    </section>
+</body>
+
+</html>
