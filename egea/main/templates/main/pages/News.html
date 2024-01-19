@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load static %}
-{{ title }}
 <link rel="stylesheet" href=" {% static 'main/css/news.css' %}">
 <html lang="en">
 
@@ -41,7 +40,7 @@
     </header>
 
     <section class="fon">
-        <div class="box">NEWS</div>
+        <div class="box">News of EGEA</div>
     </section>
 
     <section class="feed">
@@ -50,7 +49,18 @@
                 <img src="../../../static/main/images/images/loop.png">
                 <input class="searching_text"></input>
             </div>
-            <div class="title">Actual</div>
+            <div class="title">
+                {% block content %}
+                <div>
+                {% for el in newss %}
+                <div>
+                    <h2 class="big_title">{{ el.title }}</h2>
+                    <p>{{ el.news }}</p>
+                </div>
+                {% endfor %}
+                {% endblock %}
+                </div>
+            </div>
         </div>
     </section>
 </body>
